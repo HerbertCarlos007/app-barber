@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { styles } from './styles'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { ModalComponent } from '../../components/Modal'
+import { FormLogin } from '../../components/FormLogin'
 
 export const Login = () => {
 
@@ -36,7 +37,9 @@ export const Login = () => {
             <ModalComponent
                 visibleModal={showModal}
                 onClose={handleCloseModal}
-            />
+            >
+                <FormLogin/>
+            </ModalComponent>
         </View>
     )
 }

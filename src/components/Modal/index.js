@@ -14,12 +14,12 @@ export const ModalComponent = ({ visibleModal, onClose, children }) => {
             statusBarTranslucent
             animationType='slide'
         >
-            <View style={styles.container}>
+            <View style={styles.container}  >
                 <View style={styles.content}>
                     <TouchableOpacity style={styles.closeIcon} onPress={onClose}>
                         <MaterialIcons name='close' size={20} color='#000'/>
                     </TouchableOpacity>
-                    <Text style={styles.label}>Hello world</Text>
+                   {children}
                 </View>
             </View>
         </Modal>
