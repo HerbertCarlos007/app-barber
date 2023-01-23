@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
 
+
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -16,12 +17,31 @@ export const styles = StyleSheet.create({
         color: '#FFF',
         position: 'relative',
         bottom: 10,
-        fontFamily: 'Montserrat'
     },
 
     title: {
-        fontSize: 50,
+        fontSize: 70,
+        color: '#FFF', 
+    },
+
+    subtitle: {
+        fontSize: 35,
+        color: '#FFF'
+    },
+
+    buttonLogin: {
+        backgroundColor: 'orange',
+        width: 160,
+        height: 40,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 50,
+    },
+
+    textLogin: {
+        fontSize: 20,
         color: '#FFF',
-        fontFamily: 'Montserrat'
+       
     }
 })
