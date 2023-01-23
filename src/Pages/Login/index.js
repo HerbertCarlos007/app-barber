@@ -3,11 +3,14 @@ import { useState } from 'react'
 import { styles } from './styles'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { ModalComponent } from '../../components/Modal'
+
 import { FormLogin } from '../../components/FormLogin'
+import { FormRegister } from '../../components/FormRegister'
 
 export const Login = () => {
 
     const [showModal, setShowModal] = useState(false)
+    const [isLoggin, setIsLoggin] = useState(true)
 
     const handleOpenModal = () => {
         setShowModal(true)
@@ -15,6 +18,10 @@ export const Login = () => {
 
     const handleCloseModal = () => {
         setShowModal(false)
+    }
+
+    const switchLogin = () => {
+        setIsLoggin(!isLoggin)
     }
 
     return (
@@ -38,7 +45,14 @@ export const Login = () => {
                 visibleModal={showModal}
                 onClose={handleCloseModal}
             >
-                <FormLogin/>
+                {isLoggin ? <>
+                    <FormLogin switchLogin={switchLogin} />
+                </> :
+
+                    <>
+                        <FormRegister switchLogin={switchLogin} />
+                    </>
+                }
             </ModalComponent>
         </View>
     )
