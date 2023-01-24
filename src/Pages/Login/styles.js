@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native'
 
-
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -13,20 +12,24 @@ export const styles = StyleSheet.create({
     },
 
     brand: {
-        fontSize: 20,
+        fontSize: 24,
         color: '#FFF',
         position: 'relative',
         bottom: 10,
+        fontFamily: 'montserratItalic',
     },
 
     title: {
         fontSize: 70,
         color: '#FFF', 
+        fontFamily: 'montserratItalic',
     },
 
     subtitle: {
         fontSize: 35,
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: 'montserratItalic',
+
     },
 
     buttonLogin: {
@@ -42,6 +45,7 @@ export const styles = StyleSheet.create({
     textLogin: {
         fontSize: 20,
         color: '#FFF',
+        fontFamily: 'notoSerif',
        
     },
 })
