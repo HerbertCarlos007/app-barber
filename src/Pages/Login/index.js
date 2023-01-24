@@ -39,7 +39,6 @@ export const Login = ( { navigation } ) => {
                         <Text style={styles.textLogin}>Login</Text>
                     </TouchableOpacity>
                 </View>
-                <Button title='olaaa' onPress={() => navigation.navigate('home')}/>
                 <ModalComponent
                     visibleModal={showModal}
                     onClose={handleCloseModal}
