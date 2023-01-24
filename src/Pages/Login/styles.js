@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         color: '#FFF',
         position: 'relative',
         bottom: 10,
-        fontFamily: 'montserratItalic',
+        fontFamily: 'notoSerif',
     },
 
     title: {

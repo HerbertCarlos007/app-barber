@@ -29,7 +29,7 @@ export const Login = () => {
                     <MaterialCommunityIcons name='mustache' size={120} color='#FFF' />
                 </TouchableOpacity>
 
-                <Text style={styles.brand}>MARCA</Text>
+                <Text style={styles.brand}>NAMEBRAND</Text>
                 <Text style={styles.title}>Barber</Text>
                 <Text style={styles.title}>Shop</Text>
                 <Text style={styles.subtitle}>best style</Text>
