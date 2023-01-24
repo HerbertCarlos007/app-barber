@@ -1,8 +1,13 @@
 import { useFonts } from 'expo-font'
 import { Header } from './src/components/Header'
 import { Login } from './src/Pages/Login'
+import { Home } from './src/Pages/Home'
+
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 export default function App() {
+
 
   const [loaded] = useFonts({
     'montserrat': require('./assets/fonts/Montserrat-VariableFont_wght.ttf'),
@@ -11,10 +16,15 @@ export default function App() {
     'notoSerif': require('./assets/fonts/NotoSerif-Regular.ttf'),
   })
 
+  const Stack = createNativeStackNavigator()
+
   return (
-    <>
+    <NavigationContainer>
       <Header />
-      <Login />
-    </>
+      <Stack.Navigator initialRouteName='login' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name='login' component={Login} />
+        <Stack.Screen name='home' component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
