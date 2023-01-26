@@ -7,7 +7,20 @@ export const Home = () => {
         <>
             <Header />
             <View style={styles.container}>
+                <View style={styles.containerTexts}>
+                    <Text style={styles. textWelcome}>Welcome </Text>
 
+                    <Text style={styles.textName}>Mike!</Text>
+
+                </View>
+
+                <View style={styles.containerDescription}>
+                    <Text style={styles.textDescription}>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy
+                    </Text>
+                </View>
             </View>
         </>
     )

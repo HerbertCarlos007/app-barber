@@ -33,10 +33,10 @@ export default function App() {
   const Drawer = createDrawerNavigator()
 
   return (
-    <NavigationContainer>
-      <Drawer.Navigator screenOptions={{headerShown: false}} initialRouteName="login">
-        <Drawer.Screen name="login"  component={Login} />
-        <Drawer.Screen name="home" component={Home} />
+    <NavigationContainer >
+      <Drawer.Navigator screenOptions={{headerShown: false}} initialRouteName="Login">
+        <Drawer.Screen name="Login"  component={Login} />
+        <Drawer.Screen name="Home" component={Home} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
