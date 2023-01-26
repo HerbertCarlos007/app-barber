@@ -5,8 +5,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { ModalComponent } from '../../components/Modal'
 import { FormLogin } from '../../components/FormLogin'
 import { FormRegister } from '../../components/FormRegister'
+import { Header } from '../../components/Header'
 
-export const Login = ( { navigation } ) => {
+export const Login = ({ navigation }) => {
     const [showModal, setShowModal] = useState(false)
     const [isLoggin, setIsLoggin] = useState(true)
 
@@ -24,6 +25,7 @@ export const Login = ( { navigation } ) => {
 
     return (
         <>
+            <Header />
             <View style={styles.container}>
                 <View style={styles.content}>
                     <TouchableOpacity>

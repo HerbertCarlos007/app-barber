@@ -4,11 +4,10 @@ import { Login } from './src/Pages/Login'
 import { Home } from './src/Pages/Home'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
+import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 export default function App() {
-
 
   const [loaded] = useFonts({
     'montserrat': require('./assets/fonts/Montserrat-VariableFont_wght.ttf'),
@@ -16,6 +15,7 @@ export default function App() {
     'montserratItalic': require('./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf'),
     'notoSerif': require('./assets/fonts/NotoSerif-Regular.ttf'),
   })
+
 
   useEffect(() => {
     function prepare() {
@@ -30,15 +30,14 @@ export default function App() {
     SplashScreen.hideAsync()
   }
 
-  const Stack = createNativeStackNavigator()
+  const Drawer = createDrawerNavigator()
 
   return (
     <NavigationContainer>
-      <Header />
-      <Stack.Navigator initialRouteName='login' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name='login' component={Login} />
-        <Stack.Screen name='home' component={Home} />
-      </Stack.Navigator>
+      <Drawer.Navigator screenOptions={{headerShown: false}} initialRouteName="login">
+        <Drawer.Screen name="login"  component={Login} />
+        <Drawer.Screen name="home" component={Home} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
