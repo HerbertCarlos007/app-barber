@@ -2,11 +2,9 @@ import { View, Text, StatusBar, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 import { AntDesign } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
-import { DrawerActions } from '@react-navigation/native'
 
 export const Header = () => {
     const navigation = useNavigation()
-    
     return (
         <View style={styles.container}>
             <StatusBar
