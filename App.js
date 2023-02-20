@@ -2,6 +2,7 @@ import { useFonts } from 'expo-font'
 import { Header } from './src/components/Header'
 import { Login } from './src/Pages/Login'
 import { Home } from './src/Pages/Home'
+import { Scheduling } from './src/Pages/Scheduling'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
@@ -37,6 +38,7 @@ export default function App() {
       <Drawer.Navigator screenOptions={{headerShown: false}} initialRouteName="Login">
         <Drawer.Screen name="Login"  component={Login} />
         <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Scheduling" component={Scheduling} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

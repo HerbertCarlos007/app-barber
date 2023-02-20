@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     servicesContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 50,
+        marginTop: 15,
     },
 
     services: {
