@@ -26,5 +26,15 @@ export const styles = StyleSheet.create({
         borderRadius: 50,
         padding: 15,
         margin: 30,
+    },
+
+    textServices: {
+       position: 'relative',
+       bottom: 10
+    },
+
+    serviceTextContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })

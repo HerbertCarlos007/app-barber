@@ -12,27 +12,50 @@ export const ServicesProvided = () => {
 
             <View style={styles.servicesContainer}>
                 <View style={styles.services}>
-                    <TouchableOpacity style={styles.icons}>
-                        <Entypo name='scissors' size={45} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.icons}>
-                        <Entypo name='star' size={45} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.icons}>
-                        <FontAwesome name='paint-brush' size={45} />
-                    </TouchableOpacity>
+
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <Entypo name='scissors' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
+
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <Entypo name='star' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
+
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <FontAwesome name='paint-brush' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
                 </View>
 
                 <View style={styles.services}>
-                    <TouchableOpacity style={styles.icons}>
-                        <MaterialCommunityIcons name='mustache' size={45} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.icons}>
-                        <MaterialCommunityIcons name='razor-single-edge' size={45} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.icons}>
-                        <MaterialCommunityIcons name='spray-bottle' size={45} />
-                    </TouchableOpacity>
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <MaterialCommunityIcons name='mustache' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
+
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <MaterialCommunityIcons name='razor-single-edge' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
+
+                    <View style={styles.serviceTextContainer}>
+                        <TouchableOpacity style={styles.icons}>
+                            <MaterialCommunityIcons name='spray-bottle' size={45} />
+                        </TouchableOpacity>
+                        <Text style={styles.textServices}>Corte</Text>
+                    </View>
                 </View>
             </View>
         </View>
