@@ -1,8 +1,9 @@
 import { View, Text } from 'react-native'
 import { styles } from './styles'
 import { Header } from '../../components/Header'
+import { Calendar } from '../../components/Calendar'
 
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars'
+
 
 export const Scheduling = () => {
     return (
@@ -13,6 +14,7 @@ export const Scheduling = () => {
                     <Text style={styles.textAppointment}>APPOINTMENT</Text>
                     <Text style={styles.textChooseDate}>Choose your slot</Text>
                 </View>
+                <Calendar/>
             </View>
         </>
     )
