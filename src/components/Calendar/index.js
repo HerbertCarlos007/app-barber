@@ -1,62 +1,40 @@
-import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval } from 'date-fns';
-
-import { styles } from './styles'
+import React, { useState } from "react";
+import { Button, View, Text } from "react-native";
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 export const Calendar = () => {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date())
 
-  const prevMonth = () => {
-    setCurrentMonth(subMonths(currentMonth, 1));
+  const handleChangeDate = (date) => {
+    setSelectedDate(date)
+  }
+
+  const showDatePicker = () => {
+    setDatePickerVisibility(true);
   };
 
-  const nextMonth = () => {
-    setCurrentMonth(addMonths(currentMonth, 1));
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
   };
 
-  const selectDate = (date) => {
-    console.log(date);
+  const handleConfirm = (date) => {
+    console.warn("A date has been picked: ", date);
+    hideDatePicker();
   };
-
-  // Crie uma matriz de dias do mês atual
-  const daysArray = eachDayOfInterval({
-    start: startOfMonth(currentMonth),
-    end: endOfMonth(currentMonth),
-  });
-
-  // Crie uma matriz de semanas do mês atual
-  const weeksArray = [];
-  let week = [];
-  daysArray.forEach((day, index) => {
-    if (index > 0 && day.getDate() === 1) {
-      weeksArray.push(week);
-      week = [];
-    }
-    week.push(day);
-    if (index === daysArray.length - 1) {
-      weeksArray.push(week);
-    }
-  });
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Button title="Prev" onPress={prevMonth} />
-        <Text style={styles.title}>{format(currentMonth, 'MMMM yyyy')}</Text>
-        <Button title="Next" onPress={nextMonth} />
-      </View>
-      <View style={styles.calendar}>
-        {weeksArray.map((week, index) => (
-          <View style={styles.week} key={index}>
-            {week.map((day, index) => (
-              <View style={styles.day} key={index} onPress={() => selectDate(day)}>
-                <Text style={styles.dayText}>{day.getDate()}</Text>
-              </View>
-            ))}
-          </View>
-        ))}
-      </View>
+    <View>
+      <Button title="Show Date Picker" onPress={showDatePicker} />
+      <DateTimePickerModal
+        isVisible={isDatePickerVisible}
+        mode="datetime"
+        onConfirm={handleConfirm}
+        onCancel={hideDatePicker}
+        minimumDate={new Date()}
+        value={selectedDate}
+        onChange={handleChangeDate}
+      />
     </View>
   );
 };
