@@ -24,14 +24,14 @@ export const ServicesProvided = () => {
                         <TouchableOpacity style={styles.icons}>
                             <Entypo name='star' size={45} />
                         </TouchableOpacity>
-                        <Text style={styles.textServices}>Corte</Text>
+                        <Text style={styles.textServices}>Estilo</Text>
                     </View>
 
                     <View style={styles.serviceTextContainer}>
                         <TouchableOpacity style={styles.icons}>
                             <FontAwesome name='paint-brush' size={45} />
                         </TouchableOpacity>
-                        <Text style={styles.textServices}>Corte</Text>
+                        <Text style={styles.textServices}>Tratamentos</Text>
                     </View>
                 </View>
 
@@ -40,21 +40,21 @@ export const ServicesProvided = () => {
                         <TouchableOpacity style={styles.icons}>
                             <MaterialCommunityIcons name='mustache' size={45} />
                         </TouchableOpacity>
-                        <Text style={styles.textServices}>Corte</Text>
+                        <Text style={styles.textServices}>Barba</Text>
                     </View>
 
                     <View style={styles.serviceTextContainer}>
                         <TouchableOpacity style={styles.icons}>
                             <MaterialCommunityIcons name='razor-single-edge' size={45} />
                         </TouchableOpacity>
-                        <Text style={styles.textServices}>Corte</Text>
+                        <Text style={styles.textServices}>Depilação</Text>
                     </View>
 
                     <View style={styles.serviceTextContainer}>
                         <TouchableOpacity style={styles.icons}>
                             <MaterialCommunityIcons name='spray-bottle' size={45} />
                         </TouchableOpacity>
-                        <Text style={styles.textServices}>Corte</Text>
+                        <Text style={styles.textServices}>Tratamento</Text>
                     </View>
                 </View>
             </View>
